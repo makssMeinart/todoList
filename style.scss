@@ -1,0 +1,211 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Variables
+$glass-bg: linear-gradient(
+  to right bottom,
+  rgba(255, 255, 255, 0.65),
+  rgba(255, 255, 255, 0.2)
+);
+$secondary-color: rgba(12, 12, 12, 0.3);
+$accent-color: rgba(209, 56, 56, 0.7);
+$text-color: whitesmoke;
+
+// Animation
+@keyframes fall {
+  0% {transform: rotate(0deg);}
+  5% {transform: rotate(5deg)}
+  10% {transform: rotate(20deg)}
+  15% {transform: rotate(35deg)}
+  20% {transform: rotate(45deg)}
+  25% {transform: rotate(55deg)}
+  30% {transform: rotate(70deg)}
+  45% {transform: rotate(90deg)}
+  50% {transform: rotate(85deg)}
+  55% {transform: rotate(80deg)}
+  60% {transform: rotate(75deg)}
+  65% {transform: rotate(80deg)}
+  70% {transform: rotate(85deg)}
+  75% {transform: rotate(90deg)}
+  80% {transform: rotate(85deg)}
+  85% {transform: rotate(80deg)}
+  90% {transform: rotate(85deg)}
+  95% {transform: rotate(90deg)}
+  100% {transform: translateY(20px)}
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+  background: #8e0e00; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #8e0e00,
+    #1f1c18
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #8e0e00,
+    #1f1c18
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.primary-btn {
+  padding: .52em 1.2em;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: $text-color;
+  background-color: $accent-color;
+}
+
+// Main
+.main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Form
+.todo-wrapper {
+  width: 550px;
+  min-height: 600px;
+  background: $glass-bg;
+  border-radius: 1rem;
+  position: relative;
+  backdrop-filter: blur(0.4rem);
+  overflow: hidden;
+}
+// Decoration
+.cyrcle1,
+.cyrcle2 {
+  z-index: -1;
+  width: 20rem;
+  height: 20rem;
+  position: absolute;
+  background: $glass-bg;
+  border-radius: 50%;
+}
+.cyrcle1 {
+  top: 2%;
+  left: 28%;
+}
+.cyrcle2 {
+  right: 30%;
+  bottom: 18%;
+}
+
+// Todo Form
+.todo-form {
+  width: 100%;
+  height: 100px;
+  background-color: $glass-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1em;
+  box-shadow: 2px 3px 5px 2px rgba($color: #000000, $alpha: 0.15);
+  border-radius: 1rem 1rem 0 0;
+
+  #user-input {
+    width: 100%;
+    padding: 0.62rem 1rem;
+    font-size: 1.15rem;
+    border: none;
+    background-color: $secondary-color;
+    color: $text-color;
+  }
+
+  // User Filter
+  .user-filter {
+    cursor: pointer;
+    height: 42.5px;
+    border: none;
+    position: relative;
+    margin-left: 10px;
+    background: $secondary-color;
+    color: $text-color;
+    padding: .7rem;
+    
+    // Delete default select arrow
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 70px;
+      width: 105px;
+      background-color: $accent-color;
+      top: 50%;
+      right: 50%;
+    }
+
+}
+
+
+}
+
+// ToDo inner
+.todo-inner {
+  padding: 1rem;
+}
+
+// Created DOM element
+.todo {
+  width: 100%;
+  background-color: $glass-bg;
+  display: flex;
+  align-items: center;
+  background-color: $secondary-color;
+  cursor: pointer;
+  transform-origin: center left;
+
+  // Add todo.checked
+  &.checked {
+    opacity: 0.5;
+  }
+
+  li {
+    flex-grow: 1;
+    list-style-type: none;
+    font-size: 1.3rem;
+    padding: 0.5em 0.8em;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .user-check,
+  .user-delete {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border: none;
+    background-color: $accent-color;
+
+    i {
+      pointer-events: none;
+      font-size: 1.25rem;
+      color: $text-color;
+    }
+  }
+  .user-check {
+    margin-right: .25rem;
+  }
+}

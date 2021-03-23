@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <main class="main">
+        <!-- Decoration -->
+        <div class="cyrcle1"></div>
+        <!-- <div class="cyrcle2"></div> -->
+
+        <div class="todo-wrapper">
+            <form class="todo-form">
+                <input type="text" class="user-input" id="user-input">
+                <button class="primary-btn" id="user-confirm">
+                    <i class="fas fa-plus-circle"></i>
+                </button>
+                <select name="todo-select" class="user-filter" id="user-filter">
+                    <option value="all">All</option>
+                    <option value="completed">Checked</option>
+                    <option value="uncompleted">Uncomplete</option>
+                </select>
+            </form>
+            <ul class="todo-inner" id="todo-list">
+                <!-- The todo items will go here -->
+            </ul>
+        </div>
+        
+    </main>
+
+    <script src="https://kit.fontawesome.com/ca94e1ece2.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>

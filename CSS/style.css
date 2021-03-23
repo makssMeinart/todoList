@@ -1,0 +1,347 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@-webkit-keyframes fall {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  5% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  10% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  15% {
+    -webkit-transform: rotate(35deg);
+            transform: rotate(35deg);
+  }
+  20% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  25% {
+    -webkit-transform: rotate(55deg);
+            transform: rotate(55deg);
+  }
+  30% {
+    -webkit-transform: rotate(70deg);
+            transform: rotate(70deg);
+  }
+  45% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(85deg);
+            transform: rotate(85deg);
+  }
+  55% {
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
+  }
+  60% {
+    -webkit-transform: rotate(75deg);
+            transform: rotate(75deg);
+  }
+  65% {
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
+  }
+  70% {
+    -webkit-transform: rotate(85deg);
+            transform: rotate(85deg);
+  }
+  75% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  80% {
+    -webkit-transform: rotate(85deg);
+            transform: rotate(85deg);
+  }
+  85% {
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
+  }
+  90% {
+    -webkit-transform: rotate(85deg);
+            transform: rotate(85deg);
+  }
+  95% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  100% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+
+@keyframes fall {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  5% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  10% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  15% {
+    -webkit-transform: rotate(35deg);
+            transform: rotate(35deg);
+  }
+  20% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  25% {
+    -webkit-transform: rotate(55deg);
+            transform: rotate(55deg);
+  }
+  30% {
+    -webkit-transform: rotate(70deg);
+            transform: rotate(70deg);
+  }
+  45% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(85deg);
+            transform: rotate(85deg);
+  }
+  55% {
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
+  }
+  60% {
+    -webkit-transform: rotate(75deg);
+            transform: rotate(75deg);
+  }
+  65% {
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
+  }
+  70% {
+    -webkit-transform: rotate(85deg);
+            transform: rotate(85deg);
+  }
+  75% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  80% {
+    -webkit-transform: rotate(85deg);
+            transform: rotate(85deg);
+  }
+  85% {
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
+  }
+  90% {
+    -webkit-transform: rotate(85deg);
+            transform: rotate(85deg);
+  }
+  95% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  100% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+  background: #8e0e00;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#8e0e00), to(#1f1c18));
+  background: linear-gradient(to right, #8e0e00, #1f1c18);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.primary-btn {
+  padding: .52em 1.2em;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: whitesmoke;
+  background-color: rgba(209, 56, 56, 0.7);
+}
+
+.main {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-wrapper {
+  width: 550px;
+  min-height: 600px;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.65)), to(rgba(255, 255, 255, 0.2)));
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.2));
+  border-radius: 1rem;
+  position: relative;
+  -webkit-backdrop-filter: blur(0.4rem);
+          backdrop-filter: blur(0.4rem);
+  overflow: hidden;
+}
+
+.cyrcle1,
+.cyrcle2 {
+  z-index: -1;
+  width: 20rem;
+  height: 20rem;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.65)), to(rgba(255, 255, 255, 0.2)));
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.2));
+  border-radius: 50%;
+}
+
+.cyrcle1 {
+  top: 2%;
+  left: 28%;
+}
+
+.cyrcle2 {
+  right: 30%;
+  bottom: 18%;
+}
+
+.todo-form {
+  width: 100%;
+  height: 100px;
+  background-color: linear-gradient(to right bottom, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.2));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 1em;
+  -webkit-box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.todo-form #user-input {
+  width: 100%;
+  padding: 0.62rem 1rem;
+  font-size: 1.15rem;
+  border: none;
+  background-color: rgba(12, 12, 12, 0.3);
+  color: whitesmoke;
+}
+
+.todo-form .user-filter {
+  cursor: pointer;
+  height: 42.5px;
+  border: none;
+  position: relative;
+  margin-left: 10px;
+  background: rgba(12, 12, 12, 0.3);
+  color: whitesmoke;
+  padding: .7rem;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+}
+
+.todo-form .user-filter::before {
+  content: "";
+  position: absolute;
+  height: 70px;
+  width: 105px;
+  background-color: rgba(209, 56, 56, 0.7);
+  top: 50%;
+  right: 50%;
+}
+
+.todo-inner {
+  padding: 1rem;
+}
+
+.todo {
+  width: 100%;
+  background-color: linear-gradient(to right bottom, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.2));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(12, 12, 12, 0.3);
+  cursor: pointer;
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+}
+
+.todo.checked {
+  opacity: 0.5;
+}
+
+.todo li {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  list-style-type: none;
+  font-size: 1.3rem;
+  padding: 0.5em 0.8em;
+}
+
+.todo:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.todo .user-check,
+.todo .user-delete {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  border: none;
+  background-color: rgba(209, 56, 56, 0.7);
+}
+
+.todo .user-check i,
+.todo .user-delete i {
+  pointer-events: none;
+  font-size: 1.25rem;
+  color: whitesmoke;
+}
+
+.todo .user-check {
+  margin-right: .25rem;
+}
+/*# sourceMappingURL=style.css.map */
